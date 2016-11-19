@@ -1,0 +1,11 @@
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\bin\Debug\Calculator.exe.config
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.exe
+c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\C_szapy\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\C_szapy\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
