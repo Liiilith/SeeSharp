@@ -9,3 +9,5 @@ c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj
 c:\users\enowgrz\documents\visual studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
 D:\C_szapy\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
 D:\C_szapy\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
