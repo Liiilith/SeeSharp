@@ -10,6 +10,7 @@ namespace Calculator.KalkulatorWeqqen
     {
         public string getDisplay()
         {
+            // tescik
             throw new NotImplementedException();
         }
 
