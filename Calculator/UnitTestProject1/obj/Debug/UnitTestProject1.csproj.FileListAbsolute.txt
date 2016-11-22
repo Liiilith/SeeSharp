@@ -1,0 +1,8 @@
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\bin\Debug\Calculator.exe
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\bin\Debug\Calculator.pdb
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

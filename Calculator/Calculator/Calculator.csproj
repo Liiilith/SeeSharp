@@ -57,6 +57,7 @@
     <Compile Include="ICalculator.cs" />
     <Compile Include="BrokenCalculator.cs" />
     <Compile Include="KalkulatorWeqqen\Calculator.cs" />
+    <Compile Include="KalkulatorWeqqen\Calculation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleCalculator.cs" />

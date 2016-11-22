@@ -11,3 +11,10 @@ D:\C_szapy\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
 D:\C_szapy\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
 C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
 C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.exe
