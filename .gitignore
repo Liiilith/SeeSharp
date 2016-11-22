@@ -2,6 +2,10 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+
+# ignore an entire directory
+/Calculator/Calculator/bin/
+/Calculator/Calculator/obj/
 /Calculator/Calculator/bin/Debug/Calculator.exe
 /Calculator/Calculator/bin/
 /Calculator/Calculator/obj/

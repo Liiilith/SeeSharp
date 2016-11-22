@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class DerivedClass2 : 
+    class DerivedClass2 
         {
         public object Clone()
         {
