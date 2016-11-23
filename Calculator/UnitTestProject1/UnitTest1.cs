@@ -110,6 +110,7 @@ namespace UnitTestProject1
             calculator.sendData('3');
             calculator.sendData('*');
             calculator.sendData('2');
+            calculator.sendData('=');
             Assert.AreEqual("14", calculator.getDisplay());
         }
 
