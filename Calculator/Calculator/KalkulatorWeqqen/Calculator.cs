@@ -24,6 +24,10 @@ namespace Calculator.KalkulatorWeqqen
         string currentInput = "";
         string currentDisplay = "";
 
+        /// <summary>
+        /// Zwraca aktualne wyswietlnie z kalkulatora
+        /// </summary>
+        /// <returns></returns>
         public string getDisplay()
         {
             // tescik
