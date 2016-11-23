@@ -13,7 +13,10 @@ namespace Calculator.KalkulatorWeqqen
         public float secondOperand;
         public float result;
 
-
+        /// <summary>
+        /// Liczy wynik operacji i ustawia result
+        /// </summary>
+        /// <returns></returns>
         public float policz()
         {
             result = 0;
