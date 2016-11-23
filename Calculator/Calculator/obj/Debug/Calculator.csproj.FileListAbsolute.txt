@@ -13,3 +13,5 @@ C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculato
 C:\Users\enowgrz\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
 C:\Users\ejusmok\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
 C:\Users\ejusmok\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\epiogaw\Source\Repos\SeeSharp\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\epiogaw\Source\Repos\SeeSharp\Calculator\Calculator\obj\Debug\Calculator.pdb
