@@ -37,6 +37,13 @@ namespace Calculator.KalkulatorWeqqen
         public void sendData(char data)
         {
             string dataStr = data.ToString();
+
+            if (dataStr == "E")
+            {
+                currentState = CalcState.Cleared;
+                Calculation currentCalculation = new Calculation();
+                currentDisplay = "0";
+            }
             switch (currentState)
             {
                 case CalcState.OperationSet:
@@ -68,6 +75,7 @@ namespace Calculator.KalkulatorWeqqen
                         }
                         if (isDigit(dataStr))
                         {
+                            if ((dataStr == ".") && (currentInput.IndexOf(".") != -1)) break;
                             currentInput += dataStr;
                             currentDisplay = currentInput;
                         }
@@ -77,24 +85,22 @@ namespace Calculator.KalkulatorWeqqen
                     {
                         if (isOperation(dataStr)) // 4+4+
                         {
-                            float.TryParse(currentInput, out currentCalculation.secondOperand);
+                            if (currentInput != "")
+                                float.TryParse(currentInput, out currentCalculation.secondOperand);
                             currentCalculation.policz();
                             currentDisplay = currentCalculation.result.ToString();
+                            currentCalculation.firstOperand = currentCalculation.result;
+                            currentInput = "";
 
                             if (dataStr != "=")  //4+5-
                             {
-                                currentCalculation.firstOperand = currentCalculation.result;
                                 currentCalculation.operation = dataStr;
                             }
-                            else   //4+5=
-                            {
-                                currentCalculation.firstOperand = currentCalculation.result;
-                                //currentCalculation.operation = dataStr;
-                                //currentState = CalcState.OperationSet;
-                            }
+                            //currentState = CalcState.Calculated;
                         }
                         if (isDigit(dataStr)) // dodajemy koljen cyfry do drugiego operanda
                         {
+                            if ((dataStr == ".") && (currentInput.IndexOf(".") != -1)) break;
                             currentInput += dataStr;
                             currentDisplay = currentInput;
                         }
@@ -106,6 +112,7 @@ namespace Calculator.KalkulatorWeqqen
                     {
                         if (isDigit(dataStr))
                         {
+                            if ((dataStr == ".") && (currentInput.IndexOf(".") != -1)) break;
                             currentInput += dataStr;
                             currentDisplay = currentInput;
                             currentState = CalcState.FirstOperandSet;
@@ -122,6 +129,7 @@ namespace Calculator.KalkulatorWeqqen
         bool isDigit(string data)
         {
             int result;
+            if (data == ".") return true;
             if (Int32.TryParse(data, out result)) return true;
             return false;
         }
@@ -130,6 +138,11 @@ namespace Calculator.KalkulatorWeqqen
         {
 
             if (data == "+") return true;
+            if (data == "-") return true;
+            if (data == "/") return true;
+            if (data == "*") return true;
+            if (data == "C") return true; //resetuje kalkulator
+            if (data == "E") return true; //kasuje cyfrę
             if (data == "=") return true;
             return false;
         }

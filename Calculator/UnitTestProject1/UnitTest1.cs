@@ -10,7 +10,7 @@ namespace UnitTestProject1
         Calculator.KalkulatorWeqqen.Calculator calculator;
 
 
-
+        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void Number()
         {
@@ -19,6 +19,7 @@ namespace UnitTestProject1
             Assert.AreEqual("4", calculator.getDisplay());
         }
 
+        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumberNumber()
         {
@@ -31,6 +32,7 @@ namespace UnitTestProject1
             Assert.AreEqual("47237", calculator.getDisplay());
         }
 
+        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumOperNum()
         {
@@ -41,7 +43,7 @@ namespace UnitTestProject1
             Assert.AreEqual("3", calculator.getDisplay());
         }
 
-
+        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumOperNumNum()
         {
@@ -53,17 +55,7 @@ namespace UnitTestProject1
             Assert.AreEqual("33", calculator.getDisplay());
         }
 
-        [TestMethod]
-        public void NumOperNumEq()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('4');
-            calculator.sendData('+');
-            calculator.sendData('3');
-            calculator.sendData('=');
-            Assert.AreEqual("7", calculator.getDisplay());
-        }
-
+        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumOperNumSameOper()
         {
@@ -76,18 +68,8 @@ namespace UnitTestProject1
         }
 
 
-        [TestMethod]
-        public void NumOperNumEqEq()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('4');
-            calculator.sendData('+');
-            calculator.sendData('3');
-            calculator.sendData('=');
-            calculator.sendData('=');
-            Assert.AreEqual("10", calculator.getDisplay());
-        }
 
+        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumOperNumEqEqEq()
         {
@@ -101,6 +83,8 @@ namespace UnitTestProject1
             Assert.AreEqual("13", calculator.getDisplay());
         }
 
+
+        [TestCategory("Complex Operation")]
         [TestMethod]
         public void NumOperNumDiffOperEq()
         {
@@ -114,5 +98,85 @@ namespace UnitTestProject1
             Assert.AreEqual("14", calculator.getDisplay());
         }
 
+        [TestCategory("Basic Operation")]
+        [TestMethod]
+        public void NumPlusNumEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('+');
+            calculator.sendData('1');
+            calculator.sendData('=');
+            Assert.AreEqual("5", calculator.getDisplay());
+
+        }
+
+        [TestCategory("Basic Operation")]
+        [TestMethod]
+        public void NumMinusNumEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('-');
+            calculator.sendData('1');
+            calculator.sendData('=');
+            Assert.AreEqual("3", calculator.getDisplay());
+
+        }
+
+        [TestCategory("Basic Operation")]
+        [TestMethod]
+        public void NumTimesNumEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('*');
+            calculator.sendData('6');
+            calculator.sendData('=');
+            Assert.AreEqual("24", calculator.getDisplay());
+
+        }
+
+        [TestCategory("Basic Operation")]
+        [TestMethod]
+        public void NumDivNumEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('6');
+            calculator.sendData('/');
+            calculator.sendData('2');
+            calculator.sendData('=');
+            Assert.AreEqual("3", calculator.getDisplay());
+
+        }
+
+
+        [TestCategory("Basic Operation with Dot")]
+        [TestMethod]
+        public void NumDotNum()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('6');
+            calculator.sendData('.');
+            calculator.sendData('3');
+            calculator.sendData('=');
+            Assert.AreEqual("6.3", calculator.getDisplay());
+
+        }
+
+        [TestCategory("Basic Operation with Dot")]
+        [TestMethod]
+        public void NumDotNumPlusNumEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('6');
+            calculator.sendData('.');
+            calculator.sendData('3');
+            calculator.sendData('+');
+            calculator.sendData('2');
+            calculator.sendData('=');
+            Assert.AreEqual("8.3", calculator.getDisplay());
+
+        }
     }
 }
