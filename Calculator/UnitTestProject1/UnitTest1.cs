@@ -10,7 +10,7 @@ namespace UnitTestProject1
         Calculator.KalkulatorWeqqen.Calculator calculator;
 
 
-        [TestCategory("Non Operation Logic")]
+
         [TestMethod]
         public void Number()
         {
@@ -19,7 +19,6 @@ namespace UnitTestProject1
             Assert.AreEqual("4", calculator.getDisplay());
         }
 
-        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumberNumber()
         {
@@ -32,7 +31,6 @@ namespace UnitTestProject1
             Assert.AreEqual("47237", calculator.getDisplay());
         }
 
-        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumOperNum()
         {
@@ -43,7 +41,7 @@ namespace UnitTestProject1
             Assert.AreEqual("3", calculator.getDisplay());
         }
 
-        [TestCategory("Non Operation Logic")]
+
         [TestMethod]
         public void NumOperNumNum()
         {
@@ -55,7 +53,17 @@ namespace UnitTestProject1
             Assert.AreEqual("33", calculator.getDisplay());
         }
 
-        [TestCategory("Non Operation Logic")]
+        [TestMethod]
+        public void NumOperNumEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('+');
+            calculator.sendData('3');
+            calculator.sendData('=');
+            Assert.AreEqual("7", calculator.getDisplay());
+        }
+
         [TestMethod]
         public void NumOperNumSameOper()
         {
@@ -68,8 +76,18 @@ namespace UnitTestProject1
         }
 
 
+        [TestMethod]
+        public void NumOperNumEqEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('+');
+            calculator.sendData('3');
+            calculator.sendData('=');
+            calculator.sendData('=');
+            Assert.AreEqual("10", calculator.getDisplay());
+        }
 
-        [TestCategory("Non Operation Logic")]
         [TestMethod]
         public void NumOperNumEqEqEq()
         {
@@ -83,8 +101,6 @@ namespace UnitTestProject1
             Assert.AreEqual("13", calculator.getDisplay());
         }
 
-
-        [TestCategory("Complex Operation")]
         [TestMethod]
         public void NumOperNumDiffOperEq()
         {
@@ -98,84 +114,201 @@ namespace UnitTestProject1
             Assert.AreEqual("14", calculator.getDisplay());
         }
 
-        [TestCategory("Basic Operation")]
         [TestMethod]
-        public void NumPlusNumEq()
+        public void DotStart()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData(',');
+            Assert.AreEqual("0,", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void DotInside()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData(',');
+            calculator.sendData('3');
+            Assert.AreEqual("4,3", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void DotDouble()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData(',');
+            calculator.sendData(',');
+            calculator.sendData('3');
+            Assert.AreEqual("4,3", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void DotDoubleEnd()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData(',');
+            calculator.sendData('3');
+            calculator.sendData(',');
+            Assert.AreEqual("4,3", calculator.getDisplay());
+        }
+
+
+        [TestMethod]
+        public void DotInsideOper()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData(',');
+            calculator.sendData('3');
+            calculator.sendData('+');
+            calculator.sendData(',');
+            calculator.sendData('1');
+            Assert.AreEqual("0,1", calculator.getDisplay());
+        }
+
+
+        [TestMethod]
+        public void DotInsideOperEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData(',');
+            calculator.sendData('3');
+            calculator.sendData('+');
+            calculator.sendData('2');
+            calculator.sendData(',');
+            calculator.sendData('1');
+            calculator.sendData('=');
+            Assert.AreEqual("6,4", calculator.getDisplay());
+        }
+
+
+        [TestMethod]
+        public void ClearC()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('C');
+            Assert.AreEqual("0", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void ClearCafterOP()
         {
             calculator = new Calculator.KalkulatorWeqqen.Calculator();
             calculator.sendData('4');
             calculator.sendData('+');
+            calculator.sendData('2');
+            calculator.sendData('C');
+            Assert.AreEqual("0", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void ClearCafterOPEq()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('+');
+            calculator.sendData('2');
+            calculator.sendData('=');
+            calculator.sendData('C');
+            Assert.AreEqual("0", calculator.getDisplay());
+        }
+        [TestMethod]
+        public void ClearCafterOperDot()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData(',');
+            calculator.sendData('3');
+            calculator.sendData('+');
+            calculator.sendData(',');
             calculator.sendData('1');
+            calculator.sendData('C');
+            Assert.AreEqual("0", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void ClearBackspace()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('3');
+            calculator.sendData('1');
+            calculator.sendData('B');
+            Assert.AreEqual("43", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void ClearBackspaceDouble()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('3');
+            calculator.sendData('1');
+            calculator.sendData('B');
+            calculator.sendData('B');
+            Assert.AreEqual("4", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void ClearCE()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('E');                          //jaki Char?             
+            Assert.AreEqual("0", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void ClearCEOper()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('4');
+            calculator.sendData('+');
+            calculator.sendData('2');
+            calculator.sendData('E');
+            calculator.sendData('+');
+            calculator.sendData('5');
+            calculator.sendData('=');
+            Assert.AreEqual("9", calculator.getDisplay());
+        }
+        [TestMethod]
+        public void Sinus()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('9');
+            calculator.sendData('0');
+            calculator.sendData('S');
+            Assert.AreEqual("1", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void SinusafterOper()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('8');
+            calculator.sendData('6');
+            calculator.sendData('+');
+            calculator.sendData('4');
+            calculator.sendData('=');
+            calculator.sendData('S');
+            Assert.AreEqual("1", calculator.getDisplay());
+        }
+
+        [TestMethod]
+        public void OperafterSinus()
+        {
+            calculator = new Calculator.KalkulatorWeqqen.Calculator();
+            calculator.sendData('9');
+            calculator.sendData('0');
+            calculator.sendData('S');
+            calculator.sendData('+');
+            calculator.sendData('4');
             calculator.sendData('=');
             Assert.AreEqual("5", calculator.getDisplay());
-
-        }
-
-        [TestCategory("Basic Operation")]
-        [TestMethod]
-        public void NumMinusNumEq()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('4');
-            calculator.sendData('-');
-            calculator.sendData('1');
-            calculator.sendData('=');
-            Assert.AreEqual("3", calculator.getDisplay());
-
-        }
-
-        [TestCategory("Basic Operation")]
-        [TestMethod]
-        public void NumTimesNumEq()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('4');
-            calculator.sendData('*');
-            calculator.sendData('6');
-            calculator.sendData('=');
-            Assert.AreEqual("24", calculator.getDisplay());
-
-        }
-
-        [TestCategory("Basic Operation")]
-        [TestMethod]
-        public void NumDivNumEq()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('6');
-            calculator.sendData('/');
-            calculator.sendData('2');
-            calculator.sendData('=');
-            Assert.AreEqual("3", calculator.getDisplay());
-
-        }
-
-
-        [TestCategory("Basic Operation with Dot")]
-        [TestMethod]
-        public void NumDotNum()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('6');
-            calculator.sendData('.');
-            calculator.sendData('3');
-            calculator.sendData('=');
-            Assert.AreEqual("6.3", calculator.getDisplay());
-
-        }
-
-        [TestCategory("Basic Operation with Dot")]
-        [TestMethod]
-        public void NumDotNumPlusNumEq()
-        {
-            calculator = new Calculator.KalkulatorWeqqen.Calculator();
-            calculator.sendData('6');
-            calculator.sendData('.');
-            calculator.sendData('3');
-            calculator.sendData('+');
-            calculator.sendData('2');
-            calculator.sendData('=');
-            Assert.AreEqual("8.3", calculator.getDisplay());
 
         }
     }
