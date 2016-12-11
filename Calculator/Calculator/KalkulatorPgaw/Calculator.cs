@@ -89,7 +89,8 @@ namespace Calculator.KalkulatorPgaw
                 return;
             }
 
-            if (text == "CE")
+    //        if (text == "CE")
+            if (text == "E")
             {
                 operand2 = "0";
                 display = operand1;
@@ -97,7 +98,8 @@ namespace Calculator.KalkulatorPgaw
                 //opera.operacja = true; 
             }
 
-            if (text == "Sinus")
+   //        if (text == "Sinus")
+            if (text == "S")
             {
                 double kat = Math.PI * float.Parse(display) / 180.0;
                 double sinus = Math.Sin(kat);
@@ -107,7 +109,8 @@ namespace Calculator.KalkulatorPgaw
                 operand2 = "";
             }
 
-            if (text == ",")
+                if (text == ",")
+            //if (text == ".")
             {
                 if (przecinek == true)
                 {
@@ -141,7 +144,8 @@ namespace Calculator.KalkulatorPgaw
                 }
             }
 
-            if (text == "Backspace <-")
+            //      if (text == "Backspace <-")
+            if (text == "B")
             {
                 if (display.Length == 0 || display.Length == 1)
                 {
