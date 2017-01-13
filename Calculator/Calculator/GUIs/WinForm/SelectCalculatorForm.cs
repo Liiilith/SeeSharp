@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Calculator;
 
-namespace Calculator
+namespace Calculator.GUIs.WinForm
 {
-    public partial class Form1 : Form
+    public partial class SelectCalculatorForm : Form
     {
 
         ICalculator specificCalculator;
@@ -18,7 +19,7 @@ namespace Calculator
         //bez Int.: BrokenCalculator brokenCalculator = new BrokenCalculator();
 
 
-        public Form1()
+        public SelectCalculatorForm()
         {
             InitializeComponent();
 
